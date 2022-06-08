@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<body>
+ 
+<h1> Digitaal kleuren met canvas</h1>
+<p>Course Canvas Keuzevak Software Verdieping (W3Schools)</p>
+<canvas id="myCanvas" width="200" height="100"
+style="border:1px solid #c3c3c3;">
+</canvas>
+
+<canvas id="myCanvas1" width="200" height="100"
+style="border:1px solid #c3c3c3;">
+</canvas>
+
+<canvas id="myCanvas2" width="200" height="100"
+style="border:1px solid #c3c3c3;">
+</canvas>
+
+<canvas id="myCanvas3" width="200" height="100"
+style="border:1px solid #c3c3c3;">
+</canvas>
+
+<canvas id="myCanvas4" width="200" height="100"
+style="border:1px solid #c3c3c3;">
+</canvas>
+
+<canvas id="myCanvas5" width="200" height="100"
+style="border:1px solid #c3c3c3;">
+</canvas>
+
+<canvas id="myCanvas6" width="200" height="100"
+style="border:1px solid #c3c3c3;">
+</canvas>
+
+
+
+<img id="scream" width="220" height="277"
+src="img/pic_the_scream.jpg" alt="The Scream">
+
+
+<script>
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = "#FF0000";
+ctx.fillRect(0,0,150,75);
+</script>
+
+
+<script>
+var canvas = document.getElementById("myCanvas1");
+var ctx = canvas.getContext("2d");
+ctx.moveTo(200, 100);
+ctx.lineTo(0, 0);
+ctx.stroke();
+</script>
+
+
+<script>
+var canvas = document.getElementById("myCanvas2");
+var ctx = canvas.getContext("2d");
+ctx.beginPath();
+ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+ctx.stroke();
+</script>
+
+<script>
+var c = document.getElementById("myCanvas3");
+var ctx = c.getContext("2d");
+
+// Create gradient
+var grd = ctx.createLinearGradient(0, 0, 200, 0);
+grd.addColorStop(0, "red");
+grd.addColorStop(1, "black");
+
+// Fill with gradient
+ctx.fillStyle = grd;
+ctx.fillRect(10, 10, 150, 80);
+</script>
+
+<script>
+var c = document.getElementById("myCanvas4");
+var ctx = c.getContext("2d");
+
+// Create gradient
+var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+grd.addColorStop(0, "blue");
+grd.addColorStop(1, "white");
+
+// Fill with gradient
+ctx.fillStyle = grd;
+ctx.fillRect(10, 10, 150, 80);
+</script>
+
+<script>
+var canvas = document.getElementById("myCanvas5");
+var ctx = canvas.getContext("2d");
+ctx.font = "20px monospace";
+ctx.fillText("Hallo jij", 10, 50);
+</script>
+
+<script>
+var canvas = document.getElementById("myCanvas6");
+var ctx = canvas.getContext("2d");
+ctx.font = "20px monospace";
+ctx.strokeText("Hallo jij", 10, 50);
+</script>
+
+<script>
+window.onload = function() {
+  var canvas = document.getElementById("myCanvas7");
+  var ctx = canvas.getContext("2d");
+  var img = document.getElementById("scream");
+  ctx.drawImage(img, 10, 10);
+};
+</script>
+</body>
+</html>
